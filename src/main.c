@@ -1751,6 +1751,9 @@ void sb_draw_onscreen_controller(sb_emu_state_t*state, int controller_h, int con
   if(opacity<=0){opacity=0;return;}
   if(opacity>1)opacity=1;
 
+  // HACK
+  opacity = 0.1;
+
   line_color|=(int)(opacity*0x48)<<24;
   line_color2|=(int)(opacity*0x48)<<24;
   sel_color|=(int)(opacity*0x48)<<24;
